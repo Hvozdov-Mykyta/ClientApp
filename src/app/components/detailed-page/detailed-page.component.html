@@ -1,0 +1,31 @@
+<div *ngIf="url" class="link-details">
+    <h2>Link Details</h2>
+    <div class="detail-item">
+      <label>ID</label>
+      <p>{{ url.id }}</p>
+    </div>
+  
+    <div class="detail-item">
+      <label>Original URL</label>
+      <p>{{ url.originalUrl }}</p>
+    </div>
+  
+    <div class="detail-item">
+      <label>Shortened URL</label>
+      <p>{{ url.shortenedUrl }}</p>
+    </div>
+  
+    <div class="detail-item">
+      <label>Shortened By</label>
+      <p>{{ url.shortenedBy }}</p>
+    </div>
+  
+    <div class="detail-item">
+      <label>Shortened At</label>
+      <p>{{ url.shortenedAt | date:'medium' }}</p>
+    </div>
+  </div>
+  
+  <div *ngIf="!url">
+    <p>No link data available.</p>
+  </div>

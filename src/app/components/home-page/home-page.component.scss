@@ -1,0 +1,127 @@
+.container {
+  max-width: 1400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+}
+
+.urls_container {
+  width: 45%;
+  margin: 0 20px 0 0;
+}
+
+.urls_container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.urls_container li {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.url_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.url_label {
+  font-weight: bold;
+  text-wrap: nowrap;
+  overflow: visible;
+  margin-right: 10px;
+  text-align: left;
+}
+
+#original_url,
+#shortened_url {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70%;
+  padding-left: 10px;
+  text-align: start;
+}
+
+.url_item > div {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+#info_button, 
+#delete_button {
+  margin-top: 10px;
+  margin-right: 5px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#info_button {
+  background-color: #28a745;
+  color: #fff;
+}
+
+#info_button:hover {
+  background-color: #218838;
+}
+
+#delete_button {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+#delete_button:hover {
+  background-color: #c82333;
+}
+
+.shortener_container {
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  height: fit-content;
+}
+
+.shortener_container h4 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.shortener_container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.shortener_container input[type="url"] {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.shortener_container button {
+  padding: 8px 15px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.shortener_container button:hover {
+  background-color: #0056b3;
+}

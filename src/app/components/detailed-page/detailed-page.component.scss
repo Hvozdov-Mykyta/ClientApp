@@ -1,0 +1,29 @@
+*{
+    font-family: Raleway Arial, Helvetica, sans-serif, sans-serif !important; 
+}
+
+.link-details {
+    max-width: 600px;
+    margin: 200px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .detail-item label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .detail-item p {
+    margin: 0;
+    word-wrap: break-word;
+    text-wrap: wrap;
+  }

@@ -1,0 +1,33 @@
+<div class="container">
+
+  <div class="urls_container">
+    <ul>
+      @for (url of urls; track url.id) {
+        <li>
+          <div class="url_item">
+            <div class="url_label">Original URL:</div>
+            <div id="original_url">{{ url.originalUrl }}</div>
+          </div>
+          <div class="url_item">
+            <div class="url_label">Shortened URL:</div>
+            <div id="shortened_url">https://localhost:7192/short/{{ url.shortenedUrl }}</div>
+          </div>
+          <button id="info_button" [hidden]="!loginService.isAuthorized" (click)="openInfoView(url.id)">Info</button>
+          <button id="delete_button" [hidden]="!loginService.isAdmin && loginService.userId != url.shortenedBy" class="delete" (click)="deleteUrl(url.shortenedBy, url.id)">Delete</button>
+        </li>
+      }
+      @empty {
+        <li>There are no links</li>
+      }
+    </ul>
+  </div>
+
+  <div class="shortener_container" [hidden]="!loginService.isAuthorized">
+    <h4>Shorten your URL</h4>
+    <form (ngSubmit)="addUrl()">
+      <input type="url" id="url" [(ngModel)]="originalUrl" name="url" required placeholder="URL">
+      <button type="submit">Shorten</button>
+    </form>
+  </div>
+
+</div>
